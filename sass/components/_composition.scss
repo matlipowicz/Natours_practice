@@ -1,0 +1,87 @@
+.composition {
+    &__figure {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include respond(phone-small) {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+        @include respond(tablet-landscape) {
+            flex-direction: column;
+            height: 40vh;
+        }
+    }
+    &__img {
+        width: 16rem;
+        position: relative;
+        transition: all 0.5s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+        border-radius: 2px;
+
+        @include respond(phone-small) {
+            width: 18rem;
+            box-shadow: none;
+        }
+
+        @include respond(tablet-landscape) {
+            width: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        &--1 {
+            left: -2rem;
+
+            @include respond(phone-small) {
+                top: 0;
+                left: 5rem;
+            }
+
+            @include respond(tablet-landscape) {
+                top: 8rem;
+                left: -10rem;
+            }
+        }
+
+        &--2 {
+            top: -3rem;
+            @include respond(phone-small) {
+                top: 0;
+                left: 0;
+            }
+
+            @include respond(tablet-landscape) {
+                top: -5rem;
+                left: 10rem;
+            }
+        }
+
+        &--3 {
+            top: -6rem;
+            left: 2.5rem;
+            @include respond(phone-small) {
+                top: 0;
+                left: -5rem;
+            }
+
+            @include respond(tablet-landscape) {
+                top: -14rem;
+                left: 0;
+            }
+        }
+
+        &--1,
+        &--2,
+        &--3 {
+            &:hover {
+                transform: scale(1.2);
+                z-index: 100;
+                outline: 0.3rem solid $color-primary-dark;
+                outline-offset: 4px;
+                border-radius: 0.5rem;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+}

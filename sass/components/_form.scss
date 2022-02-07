@@ -1,0 +1,169 @@
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+    background-image: linear-gradient(rgba($color-white, 0.8), rgba($color-white, 0.8)), url(../../img/nat-10.jpg);
+    background-size: cover;
+    background-position: left;
+
+    @include respond(tablet-landscape) {
+        width: 80%;
+
+        align-items: flex-start;
+        background-image: linear-gradient(105deg, rgba($color-white, 0.8) 60%, transparent 60%), url(../../img/nat-10.jpg);
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+        width: 100%;
+
+        @include respond(tablet-landscape) {
+            align-items: flex-start;
+            width: 60%;
+        }
+    }
+
+    &__element {
+        width: 85%;
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        @include respond(tablet-landscape) {
+            &:nth-child(3) {
+                display: flex;
+                align-items: baseline;
+                height: 100%;
+            }
+        }
+    }
+
+    &__input {
+        padding: 1.5rem 2rem;
+        border: none;
+        border-radius: 3px;
+        border-bottom: 4px solid transparent;
+        font-size: 1.3rem;
+        font-family: $default-font;
+        font-weight: 400;
+        color: $color-grey-dark-2;
+        width: 100%;
+        transition: all 0.4s;
+
+        &:focus {
+            outline: none;
+
+            &:valid {
+                border-bottom: 4px solid $color-primary;
+                outline: none;
+            }
+
+            &:invalid {
+                border-bottom: 4px solid $color-tertiary;
+                outline: none;
+            }
+        }
+
+        &:-webkit-placeholder-shown:focus + &__label {
+            transform: translateY(1rem);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &::-webkit-input-placeholder {
+            font-size: 1.3rem;
+            font-family: $default-font;
+            font-weight: 400;
+            color: $color-grey-dark;
+        }
+
+        // &:placeholder-shown:focus ~ &__label:focus {
+        //     transform: translateY(0);
+        //     opacity: 1;
+        //     visibility: visible;
+        // }
+    }
+
+    &__label {
+        display: block;
+        margin: 1rem 0 0 2rem;
+        font-size: 1.1rem;
+        font-family: $default-font;
+        font-weight: 600;
+        color: $color-grey-dark;
+        transition: all 0.4s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4.4rem);
+    }
+
+    &__radio-element {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        font-family: $default-font;
+        font-weight: 400;
+        color: $color-grey-dark;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    &__radio-button {
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        border: 5px solid $color-primary;
+        background-color: transparent;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            opacity: 0;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}
+
+.button-box {
+    align-self: flex-start;
+}

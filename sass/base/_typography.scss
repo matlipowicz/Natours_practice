@@ -1,0 +1,76 @@
+.heading-primary {
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    color: $color-white;
+
+    &--first {
+        font-size: 5.8rem;
+        display: block;
+        letter-spacing: 2rem;
+        line-height: 8rem;
+
+        animation: slideLeft 2s;
+
+        @include respond(phone) {
+            letter-spacing: 2rem;
+            line-height: 8rem;
+        }
+
+        @include respond(tablet-landscape) {
+            letter-spacing: 3rem;
+            line-height: 12rem;
+            font-size: 6.6rem;
+        }
+    }
+
+    &--second {
+        display: block;
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+        margin-bottom: 6rem;
+
+        animation: slideRight 2s;
+
+        @include respond(phone) {
+            letter-spacing: 1.2rem;
+        }
+
+        @include respond(tablet-landscape) {
+            letter-spacing: 1.6rem;
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 3.5rem;
+
+    background-image: linear-gradient(to right, $color-primary 50%, $color-primary-dark 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-tertiary {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: $color-grey-dark-2;
+    margin-bottom: 2.5rem;
+}

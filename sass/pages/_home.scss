@@ -1,0 +1,89 @@
+.section-about {
+    background-color: $color-grey-light-2;
+    padding: 10rem 3rem 10rem 3rem;
+    margin-top: -8rem;
+
+    @include respond(tablet-landscape) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        padding: 14rem 6rem;
+        margin-top: -12rem;
+    }
+}
+
+.section-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    // grid-template-rows: repeat(auto-fill, min-content);
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 0.8) 70%, rgba($color-primary, 0.8) 100%), url(../../img/nat-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 3rem;
+    margin-top: -10rem;
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+
+    @include respond(phone-small) {
+        grid-template-columns: minmax(20rem, 43rem);
+    }
+
+    @include respond(tablet-portrait) {
+        grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    }
+
+    @include respond(tablet-landscape) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        padding: 14rem 6rem;
+        margin-top: -12rem;
+    }
+}
+
+.section-tours {
+    padding: 12rem 3rem 8rem 3rem;
+    margin-top: -5rem;
+    background-color: $color-grey-light-1;
+
+    &__card-grid {
+        display: grid;
+        grid-template-columns: minmax(30rem, 35rem);
+        gap: 8rem;
+        justify-content: center;
+
+        @include respond(tablet-landscape) {
+            grid-template-columns: repeat(3, minmax(30rem, 35rem));
+            gap: 5rem;
+        }
+    }
+
+    @include respond(tablet-landscape) {
+        margin-top: -10rem;
+        padding: 12rem 12rem 8rem 12rem;
+    }
+}
+
+.section-opinions {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: space-around;
+    // gap: 2rem;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr);
+    justify-items: center;
+    gap: 4rem;
+    padding-bottom: 4rem;
+
+    // text-align: center;
+    position: relative;
+}
+.section-book {
+    display: grid;
+    grid-template-columns: minmax(1fr, max-content);
+    justify-items: center;
+    background-image: linear-gradient(to right bottom, $color-primary 0%, $color-primary-dark 100%);
+    padding: 6rem 4rem 6rem 4rem;
+}

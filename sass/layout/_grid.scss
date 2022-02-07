@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80vh minmax(min-content, max-content) repeat(5, minmax(min-content, max-content)) max-content;
+    justify-content: center;
+    position: relative;
+
+    // & > * {
+    //     height: 80vh;
+    //     width: 100%;
+    // }
+}
+
+.about-description {
+    // display: grid;
+    // grid-template-columns: 1fr;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-bottom: 3rem;
+
+    @include respond(tablet-landscape) {
+        margin-right: 10rem;
+    }
+}
+
+.about-rows {
+    @include respond(tablet-landscape) {
+        display: flex;
+    }
+}
