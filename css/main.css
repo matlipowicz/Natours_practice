@@ -703,7 +703,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80vh minmax(min-content, max-content) repeat(5, minmax(min-content, max-content)) max-content;
+  grid-template-rows: 80vh minmax(min-content, max-content) max-content;
   justify-content: center;
   position: relative; }
 
@@ -743,6 +743,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5, minmax(min-content, max-content); }
 
 .footer {
   display: grid;
@@ -924,9 +929,9 @@ body {
   @media only screen and (min-width: 69.375em) {
     .section-about {
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
       padding: 14rem 6rem;
-      margin-top: -12rem; } }
+      margin-top: -12rem;
+      clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); } }
 
 .section-features {
   display: grid;

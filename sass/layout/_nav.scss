@@ -1,5 +1,6 @@
 .hamburger-menu {
     position: absolute;
+
     &__toggle {
     }
 
@@ -99,6 +100,8 @@
     transform: rotate(-135deg);
     top: 0;
 }
+
+// NAVIGATION STYLING
 
 .navigation {
     display: flex;

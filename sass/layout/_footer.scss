@@ -20,13 +20,11 @@
         // max-width: 30rem;
     }
 
-    &__logo {
-    }
-
     &__img {
         width: 15rem;
     }
 
+    // FOOTER NAVIGATION STYLING
     &__nav {
         width: 100%;
         border-top: 1px solid $color-grey-dark;
@@ -65,11 +63,11 @@
     }
 }
 
+// COPYRIGHT
+
 .copyright {
     border-top: 1px solid $color-grey-dark;
     padding: 1rem 0;
-    &__text {
-    }
 
     &__link {
         display: inline-block;
